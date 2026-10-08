@@ -1,0 +1,33 @@
+{
+  "MISSING_IMPORTS": 0,
+  "MISSING_ASSETS": 0,
+  "UNREGISTERED_ROUTE_TARGETS": 0,
+  "DUPLICATE_ROUTE_VALUES": 0,
+  "DIRECT_HTTP_CALLS_FROM_VIEWS": 0,
+  "DIRECT_HTTP_CALLS_FROM_CONTROLLERS": 0,
+  "ACTIVE_NETWORK_CALLS_IN_OFFLINE_MODE": 0,
+  "OFFLINE_LOGIC_REGRESSIONS": 0,
+  "BOTTOM_NAV_SEMANTIC_MISMATCH": 0,
+  "GENERIC_MATERIAL_PRESENTATION_OCCURRENCES": 0,
+  "TRANSLATION_PARITY_AR_EN_DE": true,
+  "MISSING_REFERENCED_TRANSLATION_KEYS": 0,
+  "OFFLINE_ENVIRONMENT": "offlineDemo",
+  "OFFLINE_REPOSITORIES_BOUND": true,
+  "details": {
+    "missing_imports": [],
+    "missing_assets": [],
+    "unregistered_routes": [],
+    "duplicate_routes": {},
+    "direct_http_views": [],
+    "direct_http_controllers": [],
+    "offline_network_types": [],
+    "protected_logic_changes": [],
+    "generic_material_files": [],
+    "translation_missing": {
+      "en": [],
+      "de": []
+    },
+    "missing_translation_refs": [],
+    "asset_reference_count": 24
+  }
+}
