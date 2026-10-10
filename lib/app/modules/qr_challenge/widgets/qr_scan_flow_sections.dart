@@ -32,7 +32,7 @@ class QrFlowProgress extends StatelessWidget {
     return ListView(
       padding: context.responsive.pageInsets(
         top: AppSpacing.xl,
-        bottom: AppSpacing.huge,
+        bottom: AppSpacing.pageBottom,
       ),
       children: [
         if (showScannerFrame) ...[
@@ -89,7 +89,7 @@ class QrBranchRequiredContent extends StatelessWidget {
     return ListView(
       padding: context.responsive.pageInsets(
         top: AppSpacing.md,
-        bottom: AppSpacing.huge,
+        bottom: AppSpacing.pageBottom,
       ),
       children: [
         BaderFormSurface(
@@ -263,7 +263,7 @@ class QrReadyToScanContent extends StatelessWidget {
     return ListView(
       padding: context.responsive.pageInsets(
         top: AppSpacing.md,
-        bottom: AppSpacing.huge,
+        bottom: AppSpacing.pageBottom,
       ),
       children: [
         if (branch != null) ...[
@@ -539,7 +539,7 @@ class QrVerificationResultContent extends StatelessWidget {
     return ListView(
       padding: context.responsive.pageInsets(
         top: AppSpacing.md,
-        bottom: AppSpacing.huge,
+        bottom: AppSpacing.pageBottom,
       ),
       children: [
         BaderFormSurface(

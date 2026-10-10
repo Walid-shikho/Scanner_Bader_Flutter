@@ -28,6 +28,7 @@ class BaderTextField extends StatelessWidget {
     this.autofocus = false,
     this.enabled = true,
     this.readOnly = false,
+    this.showCursor,
     this.onChanged,
     this.onSubmitted,
     this.onTap,
@@ -53,6 +54,7 @@ class BaderTextField extends StatelessWidget {
   final bool autofocus;
   final bool enabled;
   final bool readOnly;
+  final bool? showCursor;
   final ValueChanged<String>? onChanged;
   final ValueChanged<String>? onSubmitted;
   final VoidCallback? onTap;
@@ -80,6 +82,7 @@ class BaderTextField extends StatelessWidget {
       autofocus: autofocus,
       enabled: enabled,
       readOnly: readOnly,
+      showCursor: showCursor,
       onChanged: onChanged,
       onSubmitted: onSubmitted,
       onTap: onTap,
@@ -111,6 +114,7 @@ class BaderTextFormField extends StatelessWidget {
     this.autofocus = false,
     this.enabled = true,
     this.readOnly = false,
+    this.showCursor,
     this.onChanged,
     this.onFieldSubmitted,
     this.onTap,
@@ -142,6 +146,7 @@ class BaderTextFormField extends StatelessWidget {
   final bool autofocus;
   final bool enabled;
   final bool readOnly;
+  final bool? showCursor;
   final ValueChanged<String>? onChanged;
   final ValueChanged<String>? onFieldSubmitted;
   final VoidCallback? onTap;
@@ -175,6 +180,7 @@ class BaderTextFormField extends StatelessWidget {
       autofocus: autofocus,
       enabled: enabled,
       readOnly: readOnly,
+      showCursor: showCursor,
       onChanged: onChanged,
       onFieldSubmitted: onFieldSubmitted,
       onTap: onTap,

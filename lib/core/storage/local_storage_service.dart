@@ -30,4 +30,5 @@ class LocalStorageService extends GetxService {
 abstract final class StorageKeys {
   static const locale = 'app_locale';
   static const themeMode = 'theme_mode';
+  static const onboardingSeen = 'scanner_partner_onboarding_seen';
 }

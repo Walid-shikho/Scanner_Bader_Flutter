@@ -65,10 +65,13 @@ class PartnerBranchesView extends GetView<PartnerBranchesController> {
                     maxWidth: 760,
                     padding: context.responsive.pageInsets(
                       top: AppSpacing.sm,
-                      bottom: AppSpacing.xxl,
+                      bottom: 0,
                     ),
                     child: ListView.separated(
                       physics: const AlwaysScrollableScrollPhysics(),
+                      padding: const EdgeInsets.only(
+                        bottom: AppSpacing.pageBottom,
+                      ),
                       itemCount: controller.branches.length,
                       separatorBuilder: (_, __) =>
                           const SizedBox(height: AppSpacing.md),

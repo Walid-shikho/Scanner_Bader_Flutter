@@ -11,4 +11,7 @@ abstract final class AppSpacing {
 
   /// Fixed breathing room between the system/app toolbar and page content.
   static const double pageTop = md;
+
+  /// Standard scroll breathing room at the end of full-screen pages.
+  static const double pageBottom = 80;
 }

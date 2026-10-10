@@ -34,7 +34,7 @@ class EligibleOffersView extends GetView<EligibleOffersController> {
                     EligibleOffersState.missingContext => Padding(
                         padding: context.responsive.pageInsets(
                           top: AppSpacing.xl,
-                          bottom: AppSpacing.huge,
+                          bottom: AppSpacing.pageBottom,
                         ),
                         child: AppEmptyState(
                           title: 'redemption_context_missing'.tr,
@@ -44,7 +44,7 @@ class EligibleOffersView extends GetView<EligibleOffersController> {
                     EligibleOffersState.error => Padding(
                         padding: context.responsive.pageInsets(
                           top: AppSpacing.xl,
-                          bottom: AppSpacing.huge,
+                          bottom: AppSpacing.pageBottom,
                         ),
                         child: AppEmptyState(
                           title: 'server_error'.tr,
@@ -57,7 +57,7 @@ class EligibleOffersView extends GetView<EligibleOffersController> {
                         ? Padding(
                             padding: context.responsive.pageInsets(
                               top: AppSpacing.xl,
-                              bottom: AppSpacing.huge,
+                              bottom: AppSpacing.pageBottom,
                             ),
                             child: AppEmptyState(
                               title: 'no_eligible_offers'.tr,
@@ -67,7 +67,7 @@ class EligibleOffersView extends GetView<EligibleOffersController> {
                         : ListView.separated(
                             padding: context.responsive.pageInsets(
                               top: AppSpacing.md,
-                              bottom: AppSpacing.huge,
+                              bottom: AppSpacing.pageBottom,
                             ),
                             itemCount: controller.offers.length,
                             separatorBuilder: (_, __) =>

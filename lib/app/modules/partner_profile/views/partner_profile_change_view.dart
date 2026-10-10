@@ -51,13 +51,16 @@ class PartnerProfileChangeView extends GetView<PartnerProfileChangeController> {
                   maxWidth: 720,
                   padding: context.responsive.pageInsets(
                     top: AppSpacing.sm,
-                    bottom: AppSpacing.xxl,
+                    bottom: 0,
                   ),
                   child: Form(
                     key: controller.formKey,
                     child: ListView(
                       keyboardDismissBehavior:
                           ScrollViewKeyboardDismissBehavior.onDrag,
+                      padding: const EdgeInsets.only(
+                        bottom: AppSpacing.pageBottom,
+                      ),
                       children: [
                         BaderFormSurface(
                           child: Column(

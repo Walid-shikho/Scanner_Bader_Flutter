@@ -44,7 +44,7 @@ class MembershipsView extends GetView<MembershipsController> {
                     return Padding(
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.xl,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       child: AppEmptyState(
                         title: 'permission_denied'.tr,
@@ -56,7 +56,7 @@ class MembershipsView extends GetView<MembershipsController> {
                     return Padding(
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.xl,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       child: AppEmptyState(
                         title: 'server_error'.tr,
@@ -73,7 +73,7 @@ class MembershipsView extends GetView<MembershipsController> {
                       physics: const AlwaysScrollableScrollPhysics(),
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.md,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       children: [
                         const _ReadOnlyMembershipNotice(),

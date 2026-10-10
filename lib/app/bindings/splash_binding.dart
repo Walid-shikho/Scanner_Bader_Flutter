@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 import '../auth/app_mode_controller.dart';
+import '../../core/storage/local_storage_service.dart';
 import '../modules/splash/controllers/splash_controller.dart';
 
 class SplashBinding extends Bindings {
@@ -9,6 +10,7 @@ class SplashBinding extends Bindings {
     Get.put<SplashController>(
       SplashController(
         Get.find<AppModeController>(),
+        Get.find<LocalStorageService>(),
       ),
     );
   }

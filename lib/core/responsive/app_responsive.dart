@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import 'app_breakpoints.dart';
+import '../theme/app_spacing.dart';
 
 /// Immutable responsive snapshot for the current Flutter view.
 ///
@@ -62,7 +63,7 @@ class AppResponsiveInfo {
 
   double get verticalPagePadding => isCompact ? 16 : 20;
 
-  EdgeInsets pageInsets({double top = 0, double bottom = 0}) {
+  EdgeInsets pageInsets({double top = 0, double bottom = AppSpacing.pageBottom}) {
     return EdgeInsets.fromLTRB(
       horizontalPagePadding,
       top,

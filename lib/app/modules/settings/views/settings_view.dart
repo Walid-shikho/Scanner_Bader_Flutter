@@ -35,7 +35,7 @@ class SettingsView extends GetView<SettingsController> {
           maxWidth: 680,
           child: ListView(
             keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-            padding: context.responsive.pageInsets(top: 0, bottom: 36),
+            padding: context.responsive.pageInsets(top: 0, bottom: AppSpacing.pageBottom),
             children: [
               SettingsSectionTitle('appearance'.tr),
               SettingsCard(
@@ -240,6 +240,7 @@ class SettingsView extends GetView<SettingsController> {
     final selected = await BaderAdaptiveDialog.show<PartnerBranchData?>(
       context: context,
       title: 'select_branch'.tr,
+      maxWidth: 520,
       content: HomeBranchPickerContent(
         branches: branches,
         selectedBranchPublicId:

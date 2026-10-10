@@ -39,7 +39,7 @@ class RedemptionsView extends GetView<RedemptionsController> {
                     return Padding(
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.xl,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       child: AppEmptyState(
                         title: 'permission_denied'.tr,
@@ -51,7 +51,7 @@ class RedemptionsView extends GetView<RedemptionsController> {
                     return Padding(
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.xl,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       child: AppEmptyState(
                         title: 'server_error'.tr,
@@ -67,7 +67,7 @@ class RedemptionsView extends GetView<RedemptionsController> {
                     child: ListView(
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.md,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       children: [
                         AppSearchField(

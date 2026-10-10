@@ -36,7 +36,7 @@ class FoundationFeatureView extends StatelessWidget {
                 child: SingleChildScrollView(
                   padding: context.responsive.pageInsets(
                     top: AppSpacing.xl,
-                    bottom: AppSpacing.huge,
+                    bottom: AppSpacing.pageBottom,
                   ),
                   child: AppEmptyState(
                     icon: 'assets/icons/file-empty.png',

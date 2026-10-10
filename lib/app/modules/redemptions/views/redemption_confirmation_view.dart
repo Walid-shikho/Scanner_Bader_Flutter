@@ -44,7 +44,7 @@ class RedemptionConfirmationView
                     return Padding(
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.xl,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       child: AppEmptyState(
                         title: 'redemption_context_missing'.tr,
@@ -56,7 +56,7 @@ class RedemptionConfirmationView
                   return ListView(
                     padding: context.responsive.pageInsets(
                       top: AppSpacing.md,
-                      bottom: AppSpacing.huge,
+                      bottom: AppSpacing.pageBottom,
                     ),
                     children: [
                       RedemptionContextSummary(args: args),

@@ -9,6 +9,7 @@ import '../../../../core/theme/app_text_styles.dart';
 import '../../../../core/widgets/app_empty_state.dart';
 import '../../../../core/widgets/app_primary_button.dart';
 import '../../../../core/widgets/bader_adaptive_scaffold.dart';
+import '../../../../core/widgets/bader_datetime_picker_field.dart';
 import '../../../../core/widgets/bader_dropdown.dart';
 import '../../../../core/widgets/bader_fields.dart';
 import '../../../../core/widgets/bader_filter_chip.dart';
@@ -75,11 +76,13 @@ class _OfferCreateForm extends StatelessWidget {
       maxWidth: 760,
       padding: context.responsive.pageInsets(
         top: AppSpacing.sm,
+        bottom: 0,
       ),
       child: Form(
         key: controller.formKey,
         child: ListView(
           keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+          padding: const EdgeInsets.only(bottom: AppSpacing.pageBottom),
           children: [
             if (!controller.productionCardTaxonomyReady) ...[
               BaderFormSurface(
@@ -189,23 +192,17 @@ class _OfferCreateForm extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: AppSpacing.lg),
-                  BaderTextFormField(
+                  BaderDateTimePickerField(
                     controller: controller.startsAtController,
-                    decoration: InputDecoration(
-                      labelText: 'offer_starts_at'.tr,
-                      hintText: 'offer_datetime_hint'.tr,
-                    ),
-                    keyboardType: TextInputType.datetime,
+                    labelText: 'offer_starts_at'.tr,
+                    hintText: 'offer_datetime_hint'.tr,
                     validator: controller.validateDate,
                   ),
                   const SizedBox(height: AppSpacing.md),
-                  BaderTextFormField(
+                  BaderDateTimePickerField(
                     controller: controller.endsAtController,
-                    decoration: InputDecoration(
-                      labelText: 'offer_ends_at'.tr,
-                      hintText: 'offer_datetime_hint'.tr,
-                    ),
-                    keyboardType: TextInputType.datetime,
+                    labelText: 'offer_ends_at'.tr,
+                    hintText: 'offer_datetime_hint'.tr,
                     validator: controller.validateDate,
                   ),
                 ],
@@ -284,7 +281,6 @@ class _OfferCreateForm extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 80,),
           ],
         ),
       ),

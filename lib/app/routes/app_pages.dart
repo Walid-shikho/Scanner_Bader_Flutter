@@ -14,6 +14,9 @@ import '../modules/auth/views/login_view.dart';
 import '../modules/auth/views/mode_selection_view.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/memberships/views/memberships_view.dart';
+import '../modules/onboarding/controllers/onboarding_controller.dart';
+import '../modules/onboarding/views/onboarding_view.dart';
+import '../../core/storage/local_storage_service.dart';
 import '../modules/partner/views/partner_view.dart';
 import '../modules/partner_branches/views/partner_branch_create_view.dart';
 import '../modules/partner_branches/views/partner_branch_edit_view.dart';
@@ -51,6 +54,15 @@ abstract final class AppPages {
       name: AppRoutes.splash,
       page: () => const SplashView(),
       binding: SplashBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.onboarding,
+      page: () => const OnboardingView(),
+      binding: BindingsBuilder(
+        () => Get.lazyPut<OnboardingController>(
+          () => OnboardingController(Get.find<LocalStorageService>()),
+        ),
+      ),
     ),
     GetPage(name: AppRoutes.modeSelection, page: () => const ModeSelectionView(), binding: ModeSelectionBinding()),
     GetPage(name: AppRoutes.login, page: () => const LoginView(), binding: LoginBinding()),

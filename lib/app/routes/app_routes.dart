@@ -1,5 +1,6 @@
 abstract final class AppRoutes {
   static const splash = '/splash';
+  static const onboarding = '/onboarding';
   static const modeSelection = '/mode-selection';
   static const login = '/login';
   static const shell = '/';

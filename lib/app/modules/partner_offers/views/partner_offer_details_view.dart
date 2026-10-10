@@ -47,9 +47,12 @@ class PartnerOfferDetailsView extends GetView<PartnerOfferDetailsController> {
                   maxWidth: 760,
                   padding: context.responsive.pageInsets(
                     top: AppSpacing.sm,
-                    bottom: AppSpacing.huge,
+                    bottom: 0,
                   ),
                   child: ListView(
+                    padding: const EdgeInsets.only(
+                      bottom: AppSpacing.pageBottom,
+                    ),
                     children: [
                       BaderFormSurface(
                         child: Column(

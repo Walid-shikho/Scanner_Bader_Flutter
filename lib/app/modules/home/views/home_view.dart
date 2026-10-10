@@ -101,7 +101,7 @@ class HomeView extends GetView<HomeController> {
                     pagePadding,
                     AppSpacing.md,
                     pagePadding,
-                    AppSpacing.huge,
+                    AppSpacing.pageBottom,
                   ),
                   sliver: SliverList(
                     delegate: SliverChildListDelegate([
@@ -122,9 +122,6 @@ class HomeView extends GetView<HomeController> {
                         onRedemptions: controller.openRedemptions,
                         onStatistics: controller.openStatistics,
                         onSettings: controller.openSettings,
-                      ),
-                      SizedBox(
-                        height: MediaQuery.paddingOf(context).bottom + 96,
                       ),
                     ]),
                   ),

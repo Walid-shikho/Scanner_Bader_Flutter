@@ -76,7 +76,7 @@ class PartnerProfileView extends GetView<PartnerProfileController> {
                   SliverPadding(
                     padding: responsive.pageInsets(
                       top: AppSpacing.sm,
-                      bottom: AppSpacing.huge,
+                      bottom: AppSpacing.pageBottom,
                     ),
                     sliver: SliverToBoxAdapter(
                       child: _PartnerProfileContent(

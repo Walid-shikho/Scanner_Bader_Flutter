@@ -45,7 +45,7 @@ class BaderPageSafeArea extends StatelessWidget {
     required this.child,
     this.appBarHandled = false,
     this.appBarOverlay = false,
-    this.bottom = true,
+    this.bottom = false,
     this.applyTopSpacing = true,
   });
 

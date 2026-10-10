@@ -986,12 +986,41 @@ class _QuickAccessSurface extends StatelessWidget {
                 : constraints.maxWidth >= 400
                     ? 3.15
                     : 2.55;
-        final itemWidth =
-            ((constraints.maxWidth - gap * (visibleItems - 1)) / visibleItems)
+        final fittedThreeItemWidth =
+            (constraints.maxWidth - gap * (actions.length - 1)) / actions.length;
+        final itemWidth = actions.length <= 3 && !responsive.largeText
+            ? fittedThreeItemWidth.clamp(88.0, 132.0).toDouble()
+            : ((constraints.maxWidth - gap * (visibleItems - 1)) / visibleItems)
                 .clamp(108.0, 176.0)
                 .toDouble();
         final itemHeight =
             responsive.largeText ? itemWidth * 1.38 : itemWidth * 1.3;
+
+        final totalWidth =
+            (actions.length * itemWidth) + ((actions.length - 1) * gap);
+
+        if (totalWidth <= constraints.maxWidth) {
+          return SizedBox(
+            height: itemHeight,
+            child: Center(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  for (var index = 0; index < actions.length; index++) ...[
+                    SizedBox(
+                      width: itemWidth,
+                      child: _HomeQuickActionTile(
+                        action: actions[index],
+                        tint: _palette[index % _palette.length],
+                      ),
+                    ),
+                    if (index != actions.length - 1) SizedBox(width: gap),
+                  ],
+                ],
+              ),
+            ),
+          );
+        }
 
         return SizedBox(
           height: itemHeight,

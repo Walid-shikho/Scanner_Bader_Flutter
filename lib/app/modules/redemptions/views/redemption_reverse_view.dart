@@ -38,7 +38,7 @@ class RedemptionReverseView extends GetView<RedemptionReverseController> {
                     return Padding(
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.xl,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       child: AppEmptyState(
                         title: 'permission_denied'.tr,
@@ -50,7 +50,7 @@ class RedemptionReverseView extends GetView<RedemptionReverseController> {
                     return Padding(
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.xl,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       child: AppEmptyState(
                         icon: 'assets/icons/shield-lock.png',
@@ -64,7 +64,7 @@ class RedemptionReverseView extends GetView<RedemptionReverseController> {
                     return Padding(
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.xl,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       child: AppEmptyState(
                         icon: 'assets/icons/shield-lock.png',
@@ -77,7 +77,7 @@ class RedemptionReverseView extends GetView<RedemptionReverseController> {
                   return ListView(
                     padding: context.responsive.pageInsets(
                       top: AppSpacing.md,
-                      bottom: AppSpacing.huge,
+                      bottom: AppSpacing.pageBottom,
                     ),
                     children: [
                       BaderFormSurface(

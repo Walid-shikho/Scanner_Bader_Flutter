@@ -9,6 +9,7 @@ import '../../../../core/theme/app_text_styles.dart';
 import '../../../../core/widgets/app_empty_state.dart';
 import '../../../../core/widgets/app_primary_button.dart';
 import '../../../../core/widgets/bader_adaptive_scaffold.dart';
+import '../../../../core/widgets/bader_datetime_picker_field.dart';
 import '../../../../core/widgets/bader_fields.dart';
 import '../../../../core/widgets/bader_form_surface.dart';
 import '../../../../core/widgets/bader_integrated_page_header.dart';
@@ -60,7 +61,7 @@ class PartnerOfferEditView extends GetView<PartnerOfferEditController> {
                   return Padding(
                     padding: context.responsive.pageInsets(
                       top: AppSpacing.xl,
-                      bottom: AppSpacing.huge,
+                      bottom: AppSpacing.pageBottom,
                     ),
                     child: AppEmptyState(
                       title: 'offer_conflict_title'.tr,
@@ -92,12 +93,13 @@ class _OfferEditForm extends StatelessWidget {
       maxWidth: 760,
       padding: context.responsive.pageInsets(
         top: AppSpacing.sm,
-        bottom: AppSpacing.huge,
+        bottom: 0,
       ),
       child: Form(
         key: controller.formKey,
         child: ListView(
           keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+          padding: const EdgeInsets.only(bottom: AppSpacing.pageBottom),
           children: [
             BaderFormSurface(
               backgroundColor: AppColors.warningSoft,
@@ -203,23 +205,17 @@ class _OfferEditForm extends StatelessWidget {
                     validator: controller.validatePointsCost,
                   ),
                   const SizedBox(height: AppSpacing.md),
-                  BaderTextFormField(
+                  BaderDateTimePickerField(
                     controller: controller.startsAtController,
-                    decoration: InputDecoration(
-                      labelText: 'offer_starts_at'.tr,
-                      hintText: 'offer_datetime_hint'.tr,
-                    ),
-                    keyboardType: TextInputType.datetime,
+                    labelText: 'offer_starts_at'.tr,
+                    hintText: 'offer_datetime_hint'.tr,
                     validator: controller.validateDate,
                   ),
                   const SizedBox(height: AppSpacing.md),
-                  BaderTextFormField(
+                  BaderDateTimePickerField(
                     controller: controller.endsAtController,
-                    decoration: InputDecoration(
-                      labelText: 'offer_ends_at'.tr,
-                      hintText: 'offer_datetime_hint'.tr,
-                    ),
-                    keyboardType: TextInputType.datetime,
+                    labelText: 'offer_ends_at'.tr,
+                    hintText: 'offer_datetime_hint'.tr,
                     validator: controller.validateDate,
                   ),
                 ],

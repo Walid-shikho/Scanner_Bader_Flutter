@@ -33,7 +33,7 @@ class RedemptionReceiptView extends GetView<RedemptionReceiptController> {
                     ? Padding(
                         padding: context.responsive.pageInsets(
                           top: AppSpacing.xl,
-                          bottom: AppSpacing.huge,
+                          bottom: AppSpacing.pageBottom,
                         ),
                         child: AppEmptyState(
                           title: 'redemption_receipt_missing'.tr,
@@ -43,7 +43,7 @@ class RedemptionReceiptView extends GetView<RedemptionReceiptController> {
                     : ListView(
                         padding: context.responsive.pageInsets(
                           top: AppSpacing.md,
-                          bottom: AppSpacing.huge,
+                          bottom: AppSpacing.pageBottom,
                         ),
                         children: [
                           RedemptionReceiptSurface(

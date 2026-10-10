@@ -588,7 +588,7 @@ class BaderFormSkeleton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       physics: const NeverScrollableScrollPhysics(),
-      padding: context.responsive.pageInsets(top: 0, bottom: 36),
+      padding: context.responsive.pageInsets(top: 0, bottom: AppSpacing.pageBottom),
       children: [
         if (showAvatar) ...[
           const Center(child: BaderSkeletonCircle(diameter: 96)),
@@ -936,7 +936,7 @@ class BaderVolunteerFormSkeleton extends StatelessWidget {
         Expanded(
           child: ListView(
             physics: const NeverScrollableScrollPhysics(),
-            padding: responsive.pageInsets(top: 0, bottom: 28),
+            padding: responsive.pageInsets(top: 0, bottom: AppSpacing.pageBottom),
             children: const [
               BaderSkeletonBox(height: 8, radius: AppRadius.pill),
               SizedBox(height: AppSpacing.xxl),

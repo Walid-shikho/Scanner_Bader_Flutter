@@ -29,10 +29,16 @@ class PartnerProfileOperationalEditView extends GetView<PartnerProfileOperationa
                 if (controller.loading.value) return Center(child: CircularProgressIndicator.adaptive());
                 return ResponsiveContent(
                   maxWidth: 720,
-                  padding: context.responsive.pageInsets(top: AppSpacing.sm, bottom: AppSpacing.xxl),
+                  padding: context.responsive.pageInsets(
+                    top: AppSpacing.sm,
+                    bottom: 0,
+                  ),
                   child: Form(
                     key: controller.formKey,
                     child: ListView(
+                      padding: const EdgeInsets.only(
+                        bottom: AppSpacing.pageBottom,
+                      ),
                       children: [
                         BaderFormSurface(
                           child: Column(

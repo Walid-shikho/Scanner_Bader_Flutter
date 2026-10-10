@@ -37,7 +37,7 @@ class StatisticsView extends GetView<StatisticsController> {
                     StatisticsState.permissionDenied => Padding(
                         padding: context.responsive.pageInsets(
                           top: AppSpacing.xl,
-                          bottom: AppSpacing.huge,
+                          bottom: AppSpacing.pageBottom,
                         ),
                         child: AppEmptyState(
                           title: 'permission_denied'.tr,
@@ -47,7 +47,7 @@ class StatisticsView extends GetView<StatisticsController> {
                     StatisticsState.error => Padding(
                         padding: context.responsive.pageInsets(
                           top: AppSpacing.xl,
-                          bottom: AppSpacing.huge,
+                          bottom: AppSpacing.pageBottom,
                         ),
                         child: AppEmptyState(
                           title: 'server_error'.tr,
@@ -60,7 +60,7 @@ class StatisticsView extends GetView<StatisticsController> {
                         ? Padding(
                             padding: context.responsive.pageInsets(
                               top: AppSpacing.xl,
-                              bottom: AppSpacing.huge,
+                              bottom: AppSpacing.pageBottom,
                             ),
                             child: AppEmptyState(
                               title: 'server_error'.tr,
@@ -72,7 +72,7 @@ class StatisticsView extends GetView<StatisticsController> {
                         : ListView(
                             padding: context.responsive.pageInsets(
                               top: AppSpacing.md,
-                              bottom: AppSpacing.huge,
+                              bottom: AppSpacing.pageBottom,
                             ),
                             children: [
                           BaderFormSurface(

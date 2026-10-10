@@ -70,7 +70,7 @@ class PartnerOffersView extends GetView<PartnerOffersController> {
                       physics: const AlwaysScrollableScrollPhysics(),
                       padding: context.responsive.pageInsets(
                         top: AppSpacing.md,
-                        bottom: AppSpacing.huge,
+                        bottom: AppSpacing.pageBottom,
                       ),
                       children: [
                         AppSearchField(

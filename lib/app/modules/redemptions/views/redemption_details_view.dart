@@ -37,7 +37,7 @@ class RedemptionDetailsView extends GetView<RedemptionDetailsController> {
                     RedemptionDetailsState.permissionDenied => Padding(
                         padding: context.responsive.pageInsets(
                           top: AppSpacing.xl,
-                          bottom: AppSpacing.huge,
+                          bottom: AppSpacing.pageBottom,
                         ),
                         child: AppEmptyState(
                           title: 'permission_denied'.tr,
@@ -47,7 +47,7 @@ class RedemptionDetailsView extends GetView<RedemptionDetailsController> {
                     RedemptionDetailsState.notFound => Padding(
                         padding: context.responsive.pageInsets(
                           top: AppSpacing.xl,
-                          bottom: AppSpacing.huge,
+                          bottom: AppSpacing.pageBottom,
                         ),
                         child: AppEmptyState(
                           title: 'redemption_not_found'.tr,
@@ -57,7 +57,7 @@ class RedemptionDetailsView extends GetView<RedemptionDetailsController> {
                     RedemptionDetailsState.error => Padding(
                         padding: context.responsive.pageInsets(
                           top: AppSpacing.xl,
-                          bottom: AppSpacing.huge,
+                          bottom: AppSpacing.pageBottom,
                         ),
                         child: AppEmptyState(
                           title: 'server_error'.tr,
@@ -70,7 +70,7 @@ class RedemptionDetailsView extends GetView<RedemptionDetailsController> {
                         ? Padding(
                             padding: context.responsive.pageInsets(
                               top: AppSpacing.xl,
-                              bottom: AppSpacing.huge,
+                              bottom: AppSpacing.pageBottom,
                             ),
                             child: AppEmptyState(
                               title: 'redemption_not_found'.tr,
@@ -80,7 +80,7 @@ class RedemptionDetailsView extends GetView<RedemptionDetailsController> {
                         : ListView(
                             padding: context.responsive.pageInsets(
                               top: AppSpacing.md,
-                              bottom: AppSpacing.huge,
+                              bottom: AppSpacing.pageBottom,
                             ),
                             children: [
                               RedemptionReceiptSurface(receipt: receipt),

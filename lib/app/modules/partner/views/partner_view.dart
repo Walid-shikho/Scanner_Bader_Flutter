@@ -65,7 +65,7 @@ class PartnerView extends GetView<PartnerController> {
                 horizontal,
                 AppSpacing.sm,
                 horizontal,
-                media.padding.bottom + AppSpacing.md,
+                AppSpacing.pageBottom,
               ),
               sliver: SliverToBoxAdapter(
                 child: fillViewport

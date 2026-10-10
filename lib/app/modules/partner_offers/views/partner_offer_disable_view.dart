@@ -33,7 +33,7 @@ class PartnerOfferDisableView extends GetView<PartnerOfferDisableController> {
                 maxWidth: 680,
                 padding: context.responsive.pageInsets(
                   top: AppSpacing.md,
-                  bottom: AppSpacing.huge,
+                  bottom: 0,
                 ),
                 child: Obx(() {
                   final offer = controller.offer.value;
@@ -48,6 +48,9 @@ class PartnerOfferDisableView extends GetView<PartnerOfferDisableController> {
                     child: ListView(
                       keyboardDismissBehavior:
                           ScrollViewKeyboardDismissBehavior.onDrag,
+                      padding: const EdgeInsets.only(
+                        bottom: AppSpacing.pageBottom,
+                      ),
                       children: [
                         BaderFormSurface(
                           child: Column(

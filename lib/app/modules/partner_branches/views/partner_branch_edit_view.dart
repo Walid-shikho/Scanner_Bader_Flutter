@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/responsive/app_responsive.dart';
+import '../../../../core/maps/bader_location_picker.dart';
 import '../../../../core/responsive/responsive_content.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_spacing.dart';
@@ -58,9 +59,13 @@ class PartnerBranchEditView extends GetView<PartnerBranchEditController> {
                     maxWidth: 620,
                     padding: context.responsive.pageInsets(
                       top: AppSpacing.xl,
-                      bottom: AppSpacing.xxl,
+                      bottom: 0,
                     ),
-                    child: BaderFormSurface(
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.only(
+                        bottom: AppSpacing.pageBottom,
+                      ),
+                      child: BaderFormSurface(
                       backgroundColor: AppColors.warningSoft,
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -87,6 +92,7 @@ class PartnerBranchEditView extends GetView<PartnerBranchEditController> {
                         ],
                       ),
                     ),
+                    ),
                   );
                 }
                 return _EditBranchForm(controller: controller);
@@ -110,12 +116,13 @@ class _EditBranchForm extends StatelessWidget {
       maxWidth: 720,
       padding: context.responsive.pageInsets(
         top: AppSpacing.sm,
-        bottom: AppSpacing.xxl,
+        bottom: 0,
       ),
       child: Form(
         key: controller.formKey,
         child: ListView(
           keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+          padding: const EdgeInsets.only(bottom: AppSpacing.pageBottom),
           children: [
             BaderFormSurface(
               child: Column(
@@ -157,36 +164,25 @@ class _EditBranchForm extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: AppSpacing.md),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: BaderTextFormField(
-                          controller: controller.latitudeController,
-                          keyboardType: const TextInputType.numberWithOptions(
-                            signed: true,
-                            decimal: true,
-                          ),
-                          decoration: InputDecoration(
-                            labelText: 'latitude'.tr,
-                            helperText: 'optional'.tr,
-                          ),
-                        ),
+                  ListenableBuilder(
+                    listenable: Listenable.merge([
+                      controller.latitudeController,
+                      controller.longitudeController,
+                    ]),
+                    builder: (context, _) => BaderLocationPicker(
+                      latitude: double.tryParse(
+                        controller.latitudeController.text.trim(),
                       ),
-                      const SizedBox(width: AppSpacing.md),
-                      Expanded(
-                        child: BaderTextFormField(
-                          controller: controller.longitudeController,
-                          keyboardType: const TextInputType.numberWithOptions(
-                            signed: true,
-                            decimal: true,
-                          ),
-                          decoration: InputDecoration(
-                            labelText: 'longitude'.tr,
-                            helperText: 'optional'.tr,
-                          ),
-                        ),
+                      longitude: double.tryParse(
+                        controller.longitudeController.text.trim(),
                       ),
-                    ],
+                      onChanged: (latitude, longitude) {
+                        controller.latitudeController.text =
+                            latitude.toStringAsFixed(6);
+                        controller.longitudeController.text =
+                            longitude.toStringAsFixed(6);
+                      },
+                    ),
                   ),
                 ],
               ),

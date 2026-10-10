@@ -64,7 +64,7 @@ class PartnerNotificationsView extends GetView<PartnerNotificationsController> {
                   physics: const NeverScrollableScrollPhysics(),
                   padding: context.responsive.pageInsets(
                     top: 0,
-                    bottom: AppSpacing.xxxl,
+                    bottom: AppSpacing.pageBottom,
                   ),
                   itemCount: 6,
                   separatorBuilder: (_, __) =>
@@ -89,7 +89,7 @@ class PartnerNotificationsView extends GetView<PartnerNotificationsController> {
               child: ListView.separated(
                 padding: context.responsive.pageInsets(
                   top: 0,
-                  bottom: AppSpacing.xxxl,
+                  bottom: AppSpacing.pageBottom,
                 ),
                 itemCount: items.length,
                 separatorBuilder: (_, __) =>

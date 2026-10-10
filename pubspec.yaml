@@ -12,6 +12,9 @@ dependencies:
   adaptive_platform_ui: 0.1.111
   get: ^4.7.2
   shared_preferences: ^2.5.3
+  flutter_map: ^8.3.2
+  latlong2: ^0.10.1
+  video_player: 2.10.0
   http: ^1.5.0
   flutter_secure_storage: ^9.2.4
   flutter_localizations:
@@ -27,6 +30,8 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/images/onboarding/
+    - assets/videos/
   fonts:
     - family: Tajawal
       fonts:

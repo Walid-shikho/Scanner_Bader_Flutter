@@ -53,9 +53,12 @@ class ScannerDevicesView extends GetView<ScannerDevicesController> {
                   maxWidth: 720,
                   padding: context.responsive.pageInsets(
                     top: AppSpacing.sm,
-                    bottom: AppSpacing.xxl,
+                    bottom: 0,
                   ),
                   child: ListView.separated(
+                    padding: const EdgeInsets.only(
+                      bottom: AppSpacing.pageBottom,
+                    ),
                     itemCount: controller.devices.length,
                     separatorBuilder: (_, __) =>
                         const SizedBox(height: AppSpacing.md),

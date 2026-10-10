@@ -30,7 +30,7 @@ class PartnerOfferActivateView extends GetView<PartnerOfferActivateController> {
                 maxWidth: 680,
                 padding: context.responsive.pageInsets(
                   top: AppSpacing.md,
-                  bottom: AppSpacing.huge,
+                  bottom: 0,
                 ),
                 child: Obx(() {
                   final offer = controller.offer.value;
@@ -41,6 +41,9 @@ class PartnerOfferActivateView extends GetView<PartnerOfferActivateController> {
                     );
                   }
                   return ListView(
+                    padding: const EdgeInsets.only(
+                      bottom: AppSpacing.pageBottom,
+                    ),
                     children: [
                       BaderFormSurface(
                         child: Column(
